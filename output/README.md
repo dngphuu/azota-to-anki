@@ -1,4 +1,4 @@
-# Output Directory
+# Thư mục Output
 
-The generated Anki-importable CSV files will be saved here.
-You can import these files into Anki using the semicolon (`;`) separator.
+Các file CSV tương thích với Anki được tạo ra sẽ được lưu tại đây.
+Bạn có thể nhập (import) các file này vào Anki sử dụng dấu chấm phẩy (`;`) làm dấu ngăn cách.

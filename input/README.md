@@ -1,4 +1,4 @@
-# Input Directory
+# Thư mục Input
 
-Place your Azota exam result HTML files in this directory.
-The tool will scan this folder for `.html` files to process.
+Hãy đặt các file HTML kết quả thi Azota của bạn vào thư mục này.
+Công cụ sẽ quét thư mục này để tìm các file `.html` cần xử lý.

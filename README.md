@@ -1,70 +1,70 @@
-# Azota to Anki Converter
+# Công cụ chuyển đổi Azota sang Anki
 
-A Python CLI tool to convert Azota exam result HTML files into Anki-importable flashcards (CSV format).
+Một công cụ dòng lệnh (CLI) bằng Python để chuyển đổi file kết quả thi trắc nghiệm HTML từ Azota thành các thẻ flashcard có thể nhập vào Anki (định dạng CSV).
 
-## Features
+## Tính năng
 
--   **Automatic Parsing**: Extracts questions, options, and correct answers from Azota HTML result pages.
--   **Anki Compatible**: Generates CSV files ready for import into Anki (semicolon-separated).
--   **Smart Detection**: Warns if questions are not fully loaded (skeleton blocks) in the HTML.
--   **Batch Processing**: Process a single file or all files in the input directory.
+-   **Tự động phân tích**: Trích xuất câu hỏi, các lựa chọn và đáp án đúng từ trang kết quả Azota.
+-   **Tương thích Anki**: Tạo file CSV sẵn sàng để nhập vào Anki (ngăn cách bằng dấu chấm phẩy).
+-   **Phát hiện thông minh**: Cảnh báo nếu câu hỏi chưa được tải đầy đủ (các khối skeleton/loading) trong file HTML.
+-   **Xử lý hàng loạt**: Xử lý một file cụ thể hoặc tất cả các file trong thư mục đầu vào.
 
-## Prerequisites
+## Yêu cầu
 
 -   Python 3.12+
--   `uv` (recommended for package management)
+-   `uv` (khuyên dùng để quản lý gói)
 
-## Installation
+## Cài đặt
 
-1.  Clone the repository:
+1.  Clone repository:
     ```bash
     git clone https://github.com/dngphuu/azota-to-anki.git
     cd azota-to-anki
     ```
 
-2.  Install dependencies:
+2.  Cài đặt các thư viện phụ thuộc:
     ```bash
     uv venv
     uv pip install -r requirements.txt
     ```
 
-## Usage
+## Hướng dẫn sử dụng
 
-1.  **Prepare Input**:
-    -   Open your Azota exam result page in a browser.
-    -   **Scroll to the bottom** to ensure all questions are loaded.
-    -   Save the page as HTML (Ctrl+S).
-    -   Place the saved HTML file(s) in the `input` directory.
+1.  **Chuẩn bị đầu vào**:
+    -   Mở trang kết quả thi Azota của bạn trên trình duyệt.
+    -   **Cuộn xuống cuối trang** để đảm bảo tất cả các câu hỏi đã được tải xong.
+    -   Lưu trang dưới dạng HTML (Ctrl+S).
+    -   Đặt (các) file HTML đã lưu vào thư mục `input`.
 
-2.  **Run the Tool**:
+2.  **Chạy công cụ**:
     ```bash
     uv run python azota_to_anki.py
     ```
 
-3.  **Select Files**:
-    -   The tool will list available HTML files.
-    -   Enter the number of the file to process, or type `all` to process everything.
+3.  **Chọn file**:
+    -   Công cụ sẽ liệt kê các file HTML có sẵn.
+    -   Nhập số thứ tự của file cần xử lý, hoặc gõ `all` để xử lý tất cả.
 
-4.  **Import to Anki**:
-    -   Open Anki.
-    -   Go to **File** -> **Import**.
-    -   Select the generated `.csv` file from the `output` directory.
-    -   **Settings**:
-        -   Separator: **Semicolon (;)**
-        -   Allow HTML in fields: **Checked**
-        -   Map Field 1 to **Front** and Field 2 to **Back**.
+4.  **Nhập vào Anki**:
+    -   Mở Anki.
+    -   Vào **File** -> **Import**.
+    -   Chọn file `.csv` đã được tạo trong thư mục `output`.
+    -   **Cài đặt**:
+        -   Dấu ngăn cách (Separator): **Semicolon (;)** (Dấu chấm phẩy)
+        -   Cho phép HTML trong các trường (Allow HTML in fields): **Đã chọn**
+        -   Ánh xạ Trường 1 sang **Front** (Mặt trước) và Trường 2 sang **Back** (Mặt sau).
 
-## Project Structure
+## Cấu trúc dự án
 
 ```
 azota-to-anki/
-├── input/          # Place HTML files here
-├── output/         # Generated CSV files appear here
-├── azota_to_anki.py # Main script
+├── input/          # Đặt các file HTML vào đây
+├── output/         # Các file CSV kết quả sẽ xuất hiện ở đây
+├── azota_to_anki.py # Script chính
 ├── requirements.txt
 └── README.md
 ```
 
-## License
+## Giấy phép
 
 MIT
