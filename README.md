@@ -18,7 +18,7 @@ A Python CLI tool to convert Azota exam result HTML files into Anki-importable f
 
 1.  Clone the repository:
     ```bash
-    git clone https://github.com/dngph/azota-to-anki.git
+    git clone https://github.com/dngphuu/azota-to-anki.git
     cd azota-to-anki
     ```
 
