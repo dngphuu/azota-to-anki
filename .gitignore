@@ -1,0 +1,11 @@
+# Ignore everything in input and output except README.md
+input/*
+!input/README.md
+output/*
+!output/README.md
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+.env
